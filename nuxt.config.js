@@ -1,8 +1,6 @@
 export default {
   target: 'static',
-  router: {
-    base: 'https://github.com/gonzalor9991/PokemonApiVueJS'
-  },
+  
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Pokemon Api | Gonzalo Rojas',
