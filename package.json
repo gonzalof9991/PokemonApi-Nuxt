@@ -6,8 +6,6 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "heroku-postbuild": "npm run build",
     "generate": "nuxt generate"
   },
   "dependencies": {
