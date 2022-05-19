@@ -13,6 +13,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/img/pokeball.png' },
     ]
   },
 
@@ -38,6 +39,15 @@ export default {
     'bootstrap-vue/nuxt',
     
   ],
+
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
