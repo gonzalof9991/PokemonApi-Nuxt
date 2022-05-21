@@ -2,11 +2,44 @@
 
 body{
     font-family: 'Koulen', cursive;
+    background: url(/img/fondo__body.jpg);
+    background-position: center;
 }
 
 .header{
-    background: #2c2c2c;
     padding: 20px 0;
+}
+
+.section__img{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.next{
+    display: flex;
+    justify-content: center;
+}
+
+.next__button{
+    width: 200px;
+    text-align: center;
+    background: #ffcc008c;
+    padding: 10px 5px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor:pointer;
+}
+
+.next__button:hover{
+    background: rgba(255, 255, 255, 0.651);
+    color: #fc0;
 }
 
 .hero__main{
@@ -43,7 +76,6 @@ body{
     height: 400px;
     width: 300px;
     overflow: hidden;
-    position: relative;
     transition: all .5s ease;
     cursor: pointer;
     display: flex;
@@ -79,11 +111,33 @@ body{
     justify-content: center;
     align-items: center;
 }
-.text__footer{
+.h1__footer , .p__footer , .h4__footer{
     color: #fff;
     font-weight: 400;
 }
 
+
+
+.footer{
+    height: 50vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.footer__section{
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    padding: 25px auto;
+    align-items: center;
+}
+
+.footer__text{
+    backdrop-filter: brightness(0.4);
+    padding: 20px;
+    color: #fff;
+    font-weight: 400;
+}
 .opacity-2{
     opacity: 0.2;
 }
@@ -108,6 +162,74 @@ body{
     animation-direction: alternate;
 }
 
+.modal__pokemon{
+    background: #ffffffb5;
+    position: fixed;
+    top: 25%;
+    width: 20%;
+    height: 50%;
+    border-radius: 10px;
+    left: 40%;
+    z-index: 1;
+    animation-name: show;
+    animation-delay: .5s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.section__modal{
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center
+}
+
+.header__modal{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header__close{
+    border-radius: 50%;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+.header__text{
+    color: #fff;
+}
+
+.body__modal{
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.body__picture{
+    width: 100%;
+    display:flex;
+    justify-content:center
+}
+
+.body__img{
+    width: 60%;
+    min-width: 60%;
+}
+
+.body__texts{
+    flex-grow: 1;
+    background: #fff;
+}
+
 @keyframes move {
     from {
         transform: rotate(0deg);
@@ -116,4 +238,14 @@ body{
     to{
         transform: rotate(360deg);
     }
+}
+
+@keyframes show {
+    from {
+        box-shadow: 1px 0rem 4rem 10px #fafafa !important;
+    }
+    to{
+        box-shadow: 0 0.5rem 1rem rgb(0 0 0) !important;
+    }
+    
 }

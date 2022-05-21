@@ -2,7 +2,13 @@
   "Card": {
     "description": "Auto imported from components/Card.vue"
   },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
   "Header": {
     "description": "Auto imported from components/Header.vue"
+  },
+  "Modal": {
+    "description": "Auto imported from components/Modal.vue"
   }
 }

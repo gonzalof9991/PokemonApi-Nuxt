@@ -10,6 +10,9 @@
     .hero__img--pokeball{
         max-width: 50px !important;
     }
+    .footer__text{
+        font-size: 2rem;
+    }
 }
 
 /* Desktop */

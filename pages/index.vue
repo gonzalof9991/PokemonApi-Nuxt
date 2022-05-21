@@ -2,8 +2,18 @@
   <div>
     <Header/>
     <main>
-      <section class="section__main" >
+      <section class="section__img">
+
+      </section>
+      <section class="next">
         <div 
+        @click="changeUrl()"
+        class="next__button">
+          Cargar Pokemones
+        </div>
+      </section>
+      <section class="section__main" >
+        <div
         v-for="p in pokemones"
         :key="p.id"
         class="section__card">
@@ -11,13 +21,11 @@
           :url="p.url"
           />
         </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <section class="footer__section">
+
         
       </section>
-    </footer>
+    </main>
+    <Footer/>
   </div>
 </template>
 
@@ -29,11 +37,9 @@ export default {
     return{
       data: [],
       pokemones: [],
-      next: '',
-      previous: '',
-      count:0,
-      stop: false,
-      url_old : 'https://pokeapi.co/api/v2/pokemon/'
+      url_old : 'https://pokeapi.co/api/v2/pokemon/',
+      showModal: false,
+      urlModal: ''
     }
   },
   created(){
@@ -49,27 +55,23 @@ export default {
       await api.getPokemonAll()
         .then(res => {
           this.pokemones = res.results;
-          console.log(res.results.length)
-          this.count += res.results.length;
           this.next = res.next;
-          this.previous = res.previous;
         })
     },
-    async changeUrl(type){
-       let url = (type === 'next') ? this.next : this.previous;
+    async changeUrl(){
+       let url = this.next;
        await api.getPokemonAll(url)
         .then(res => {
           this.pokemones = res.results;
-          if(type === 'next'){
-            this.count += res.results.length;
-          }
-          else{
-            this.count -= res.results.length;
-          }
-          
           this.next = res.next;
-          this.previous = res.previous;
         })
+    },
+    changeModal(url){
+      this.showModal = false; 
+      this.urlModal = url;
+      setTimeout(() => {
+        this.showModal = true;
+      },1000);
     }
   }
   

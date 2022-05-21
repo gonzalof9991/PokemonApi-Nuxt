@@ -15,7 +15,7 @@
             </b-img>
         </figure>
         <div class="card__footer">
-            <p class="text__footer">Detalle</p>
+            <p class="p__footer">Detalle</p>
         </div>
         
     </div>
