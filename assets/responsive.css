@@ -1,0 +1,23 @@
+
+
+
+
+/* Mobile */
+@media screen and (max-width:900px) {
+    .hero__img{
+        max-width: 150px;
+    }
+    .hero__img--pokeball{
+        max-width: 50px !important;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width:900px) {
+    .hero__img{
+        max-width: 450px;
+    }
+    .hero__img--pokeball{
+        max-width: 100px !important;
+    }
+}

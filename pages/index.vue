@@ -2,65 +2,22 @@
   <div>
     <Header/>
     <main>
-      <section >
-        <b-container
-        fluid
-        >
-          <b-row
-          class="row-count d-flex justify-content-center align-items-center"
-          >
-            <b-col>
-              <h2 class="text-center text-white">{{showCount}} de 1126 <b class="color-pokemon">Pokemones</b></h2>
-            </b-col>
-          </b-row>
-        </b-container>
-        <b-container class="mt-5">
-          <b-row class="mb-5">
-            <b-col
-            class="d-flex flex-row justify-content-center"
-            >
-              <div
-              :class="(previous) ? 'btn-pokemon cursor-pointer shadow mr-5' : 'btn-pokemon shadow mr-5 cursor-not-allowed opacity-2'"
-              @click="() => {
-                if(previous){
-                  changeUrl('previous')
-                }
-                
-              }"
-              >
-                Anterior
-              </div>
-              <div
-              @click="() => {
-                if(next){
-                  changeUrl('next')
-                }
-                else{
-
-                }
-                
-              }"
-              class="btn-pokemon cursor-pointer shadow mr-5"
-              >
-                {{(count === 1126) ? 'Iniciar de nuevo' : 'Siguiente'}}
-              </div>
-            </b-col>
-          </b-row>
-          <b-row>
-            <b-col
-            v-for="p in pokemones"
-            :key="p.id"
-            xl="4"
-            class="mb-5"
-            >
-              <Card
-              :url="p.url"
-              />
-            </b-col>
-          </b-row>
-        </b-container>
+      <section class="section__main" >
+        <div 
+        v-for="p in pokemones"
+        :key="p.id"
+        class="section__card">
+          <Card
+          :url="p.url"
+          />
+        </div>
       </section>
     </main>
+    <footer class="footer">
+      <section class="footer__section">
+        
+      </section>
+    </footer>
   </div>
 </template>
 

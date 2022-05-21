@@ -1,21 +1,21 @@
 <template>
     <div
     :id="detail.id"
-    class="div-card shadow d-flex flex-column justify-content-center align-items-center"
+    class="card__main"
     >
-        <div class="d-flex flex-row align-items-baseline justify-content-around">
-        <h6 class="text-xl mr-2 text-white">{{detail.name}}</h6>    <p class="text-sm mr-2 text-white">PS {{detail.base_experience}}</p>
+        <div class="card__title">
+            <h6 class="h6__title mr-3">{{detail.name}}</h6>
         </div>
-        <div>
+        <figure class="card__picture">
             <b-img
-            class="img-fluid img-card"
+            class="card__img"
             :src="(detail.sprites) ? detail.sprites.front_default : null"
             >
 
             </b-img>
-        </div>
-        <div>
-            <p class="font-bold text-white">Detalle</p>
+        </figure>
+        <div class="card__footer">
+            <p class="text__footer">Detalle</p>
         </div>
         
     </div>

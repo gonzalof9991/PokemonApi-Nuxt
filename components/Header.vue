@@ -1,27 +1,35 @@
 <template>
     <header
-    class=" shadow pt-3 pb-3 bg-dark"
+    class="header"
     >
-        <nav>
-            <div
-            class=" d-flex flex-row justify-content-center align-items-center"
+        <nav class="nav">
+            <section
+            class="hero__main container"
             >
-                <b-img
-                class="img-fluid wh-150 mr-5"
-                src="/img/pokeball.png"
-                ></b-img>
 
-                <b-img
-                class="img-fluid w-25 mr-5"
-                src="/img/logo.png"
-                ></b-img>
-
-                <b-img
-                class="img-fluid wh-150"
-                src="/img/pokeball.png"
-                ></b-img>
+                <figure class="hero__picture">
+                    <b-img
+                    class="hero__img hero__img--pokeball"
+                    src="/img/pokeball.png"
+                    ></b-img>
+                </figure>
                 
-            </div>
+                <figure class="hero__picture">
+                    <b-img
+                    class="hero__img"
+                    src="/img/logo.png"
+                    ></b-img>
+                </figure>
+                
+                <figure class="hero__picture">
+                    <b-img
+                    class="hero__img hero__img--pokeball"
+                    src="/img/pokeball.png"
+                    ></b-img>
+                </figure>
+                
+                
+            </section>
         </nav>
     </header>
 </template>

@@ -6,7 +6,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Pokemon Api | Gonzalo Rojas',
+    title: 'Pokemon | API',
     htmlAttrs: {
       lang: 'es'
     },
@@ -23,7 +23,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/style.css',
+    '@/assets/style.css',
+    '@/assets/responsive.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
